@@ -1,0 +1,323 @@
+/* Osnovni reset i fontovi */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F2F2;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.lexend-font { font-family: 'Lexend', sans-serif; }
+.atkinson-font { font-family: 'Atkinson Hyperlegible', sans-serif; }
+
+/* Naslovi */
+h1,
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #A61C35;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+#main-title {
+    color: white;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #A61C35, #D95B72);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 10px rgba(166, 28, 53, 0.4);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Navigacija */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: #F2F2F2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #F2A7B5;
+    color: #A61C35;
+    box-shadow: 0 4px 15px rgba(242, 167, 181, 0.6);
+    outline: none;
+}
+
+/* Glavni sadržaj */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+/* Sekcije */
+section {
+    margin-bottom: 3rem;
+    background-color: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(166, 28, 53, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+section:hover {
+    box-shadow: 0 12px 30px rgba(166, 28, 53, 0.2);
+}
+
+/* Slike */
+img {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(166, 28, 53, 0.15);
+}
+
+
+/* Forma */
+#kontakt {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+form {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 0.5rem 1rem;
+  background-color: #A61C35;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: #8e1a2e;
+}
+
+/* Gumbi */
+button {
+    background-color: #6e6062;
+    color: white;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 15px rgba(166, 28, 53, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+button:focus {
+    background-color: #D95B72;
+    box-shadow: 0 8px 25px rgba(217, 91, 114, 0.6);
+    outline: none;
+}
+
+/* Fokus */
+a:focus,
+button:focus {
+    outline: 3px solid #F2A7B5;
+    outline-offset: 3px;
+}
+
+/* Footer */
+footer {
+    background-color: #D9ADB5;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.95rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: #3b1b20;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Accessibility Widget */
+#accessibility-widget {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 10000;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Toggle gumb (ikona) */
+#accessibility-toggle {
+    position: relative;
+    background: #df647e;
+    border: none;
+    color: white;
+    font-size: 24px;   
+    width: 60px;       
+    height: 60px;     
+    padding: 0;        
+    border-radius: 50%; 
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(166, 28, 53, 0.39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Krug iza čovječuljka */
+#accessibility-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;       
+    height: 80px;
+    background: rgb(200, 54, 84);
+    border-radius: 50%;
+    z-index: -1; 
+}
+
+#accessibility-toggle:hover,
+#accessibility-toggle:focus {
+    background: #D95B72;
+    box-shadow: 0 8px 20px rgba(217, 91, 114, 0.7);
+    outline: none;
+}
+
+/* Meni koji se otvara */
+#accessibility-menu {
+    display: none;
+    margin-top: 12px;
+    background: white;
+    border-radius: 16px;
+    padding: 14px 20px;
+    width: 180px;
+    box-shadow: 0 12px 24px rgba(166, 28, 53, 0.3);
+    text-align: center;
+}
+
+#accessibility-menu button {
+    background: #f5f1f2;
+    border: none;
+    color: rgb(6, 6, 6);
+    padding: 12px 16px;
+    margin: 8px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 14px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#accessibility-menu button:hover,
+#accessibility-menu button:focus {
+    background: #f0b7c2;
+    box-shadow: 0 6px 14px rgba(217, 91, 114, 0.7);
+    outline: none;
+}
+
+/* High contrast mode */
+.high-contrast {
+    background: black !important;
+    color: black !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.high-contrast a {
+    color: #F2A7B5 !important;
+}
+
+.high-contrast button {
+    background: #f2c2ca !important;
+    color: #A61C35 !important;
+}
+
+.high-contrast #accessibility-toggle {
+    background: #F2A7B5 !important;
+    color: #A61C35 !important;
+    box-shadow: 0 6px 12px rgba(242, 167, 181, 0.7);
+}
+
+.bold-text * {
+    font-weight: bold !important;
+}
+
+.dyslexia-font {
+    font-family: 'Lexend', Arial, sans-serif !important;
+}
+
+
+.high-contrast a,
+.bold-text a {
+    font-weight: bold !important;
+    text-decoration: underline !important;
+}

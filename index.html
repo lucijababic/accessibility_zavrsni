@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pristupačna Web Stranica</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="main-title">Pristupačna Web Stranica</h1>
+        <nav aria-label="Glavna navigacija">
+            <ul>
+                <li><a href="#o-meni">O meni</a></li>
+                <li><a href="#galerija">Galerija</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="o-meni">
+            <h2>O stranici</h2>
+            <p>Ovo je primjer pristupačne web stranice koja zadovoljava WCAG 2.2 smjernice. Stranica je strukturirana
+                semantički i optimizirana za čitače ekrana.</p>
+            <p>Kontrast boja je visok, a navigacija je jednostavna i dostupna putem tipkovnice.</p>
+            <p>Stranica nudi niz opcija za prilagodbu prikaza kako bi se korisnicima s različitim potrebama olakšalo
+                čitanje i interakcija. Kroz pristupačni widget, korisnici mogu povećati ili smanjiti veličinu fonta,
+                promijeniti razmak između slova i redova, aktivirati visoki kontrast ili podebljati tekst.</p>
+            <p>Osim toga, stranica omogućuje promjenu fonta primjerenih za ljude s disleksijom: Lexend i Atkinson
+                Hyperlegible, čime se poboljšava čitljivost i udobnost pri čitanju. Sve postavke
+                se mogu resetirati na zadane vrijednosti jednim klikom, što osigurava fleksibilnost i jednostavnost
+                korištenja.</p>
+            <p>Ovaj pristup omogućuje korisnicima da sami prilagode izgled stranice prema svojim potrebama, a
+                istovremeno zadržavaju konzistentan i čist dizajn. Widget je intuitivan, pristupačan tipkovnici i
+                kompatibilan s čitačima ekrana, čime se postiže potpuna inkluzivnost.</p>
+
+            <h3>Primjer korištenja widgeta</h3>
+            <p>Klikom na ikonu <strong>Pristupačnost</strong> u donjem desnom kutu otvara se izbornik.
+                Primjerice, korisnik koji ima poteškoće s vidom može jednim klikom povećati font i uključiti visoki
+                kontrast,
+                dok osoba s disleksijom može prebaciti prikaz u font <em>Atkinson Hyperlegible</em> za lakše čitanje.
+                Sve opcije su jasno označene i jednostavne za korištenje.</p>
+            <h3>Galerija pristupačnosti</h3>
+            <p>Ispod se nalazi galerija koja prikazuje primjere pristupačnog dizajna, osmišljene tako da poboljšaju
+                iskustvo svih korisnika. Svaka slika ilustrira važan aspekt pristupačnosti, uključujući kontrast boja,
+                veličinu i čitljivost fontova, oblik i raspored obrazaca te interaktivne elemente poput tipki i kontrola
+                koje su jednostavne za korištenje putem tipkovnice ili čitača ekrana.</p>
+            <p>Galerija služi kao vizualni vodič kako primjena WCAG 2.2 smjernica može učiniti web sadržaj dostupnim
+                osobama s različitim potrebama, uključujući korisnike s oštećenjem vida, disleksijom ili smanjenom
+                motoričkom sposobnošću. Svaki prikaz pokazuje konkretna rješenja koja poboljšavaju čitljivost, jasnoću
+                informacija i intuitivnu navigaciju.</p>
+            <h3>Kontakt forma</h3>
+            <p>Kontakt forma također je izrađena prema načelima pristupačnosti. Svi elementi su jasno označeni i
+                dostupni putem tipkovnice. U slučaju da korisnik unese netočan ili nepotpun podatak, ispod odgovarajućeg
+                polja prikazuje se jasna poruka o pogrešci. Time se korisnicima pruža neposredna povratna informacija,
+                što
+                olakšava
+                ispravljanje greške i povećava razumljivost te jednostavnost korištenja forme.
+            </p>
+        </section>
+
+
+        <section id="galerija" aria-label="Galerija slika">
+            <h2>Galerija</h2>
+            <img src="pics/1.png" alt="Slika 1" />
+            <img src="pics/2.png" alt="Slika 2" />
+            <img src="pics/3.png" alt="Slika 3" />
+            <img src="pics/4.png" alt="Slika 4" />
+            <img src="pics/5.png" alt="Slika 5" />
+            <img src="pics/6.png" alt="Slika 6" />
+            <img src="pics/7.png" alt="Slika 7" />
+            <img src="pics/8.jpg" alt="Slika 8" />
+            <img src="pics/9.jpg" alt="Slika 9" />
+        </section>
+
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <form action="#" method="post" aria-label="Kontakt forma">
+                <div class="form-group">
+                    <label for="ime">Ime:</label>
+                    <input type="text" id="ime" name="ime" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="poruka">Poruka:</label>
+                    <textarea id="poruka" name="poruka" rows="4" required></textarea>
+                </div>
+                <button type="submit">Pošalji</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Pristupačna Web Stranica. Sva prava pridržana.</p>
+    </footer>
+
+    <!-- Accessibility Widget -->
+    <div id="accessibility-widget" aria-label="Pristupačnost" role="region">
+        <button id="accessibility-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="accessibility-menu">
+            <img src="pics\accessibility.png" alt="Pristupačnost">
+        </button>
+        <div id="accessibility-menu" role="menu" aria-hidden="true">
+            <button role="menuitem" id="letter-spacing-btn">Razmak slova</button>
+            <button role="menuitem" id="line-height-btn">Razmak redova</button>
+            <button role="menuitem" id="increase-font">Povećaj font</button>
+            <button role="menuitem" id="decrease-font">Smanji font</button>
+            <button role="menuitem" id="toggle-contrast">Visoki kontrast</button>
+            <button role="menuitem" id="bold-text">Podebljaj tekst</button>
+            <button role="menuitem" id="lexend-font">Lexend</button>
+            <button role="menuitem" id="atkinson-font">Atkinson Hyperlegible</button>
+            <button role="menuitem" id="reset-settings">Resetiraj postavke</button>
+        </div>
+    </div>
+
+<script src="widget.js"></script>
+</body>
+
+</html>
