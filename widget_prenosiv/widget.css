@@ -1,0 +1,88 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.lexend-font {
+  font-family: 'Lexend', sans-serif !important;
+}
+
+.atkinson-font {
+  font-family: 'Atkinson Hyperlegible', sans-serif !important;
+}
+
+
+#accessibility-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #c00;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#accessibility-menu {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    width: 220px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+#accessibility-menu button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#accessibility-menu button:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+#accessibility-menu button:active {
+    transform: translateY(1px);
+}
+
+/* High contrast */
+.high-contrast {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* Bold tekst */
+.bold-text {
+    font-weight: bold !important;
+}
+
+/* Fontovi za disleksiju */
+.lexend-font {
+    font-family: 'Lexend', sans-serif !important;
+}
+
+.atkinson-font {
+    font-family: 'Atkinson Hyperlegible', sans-serif !important;
+}
