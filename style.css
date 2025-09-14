@@ -10,8 +10,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.lexend-font { font-family: 'Lexend', sans-serif; }
-.atkinson-font { font-family: 'Atkinson Hyperlegible', sans-serif; }
+.lexend-font {
+    font-family: 'Lexend', sans-serif;
+}
+
+.atkinson-font {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
 
 /* Naslovi */
 h1,
@@ -128,36 +133,36 @@ form {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
 button[type="submit"] {
-  padding: 0.5rem 1rem;
-  background-color: #A61C35;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: #A61C35;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 button[type="submit"]:hover {
-  background-color: #8e1a2e;
+    background-color: #8e1a2e;
 }
 
 /* Gumbi */
@@ -181,7 +186,6 @@ button:focus {
     outline: none;
 }
 
-/* Fokus */
 a:focus,
 button:focus {
     outline: 3px solid #F2A7B5;
@@ -210,7 +214,40 @@ footer {
     user-select: none;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Legenda */
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 105%;
+    left: 0;
+    top: 100%;
+    margin-top: 4px;
+    background: #fff;
+    color: #000;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+    z-index: 10;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+#accessibility-menu button:hover .tooltip,
+#accessibility-menu button:focus .tooltip {
+    display: block;
+}
+
+.access-btn {
+    position: relative;
+    display: flex;
     align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
 }
 
 /* Toggle gumb (ikona) */
@@ -219,11 +256,11 @@ footer {
     background: #df647e;
     border: none;
     color: white;
-    font-size: 24px;   
-    width: 60px;       
-    height: 60px;     
-    padding: 0;        
-    border-radius: 50%; 
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 6px 12px rgba(166, 28, 53, 0.39);
     display: flex;
@@ -239,11 +276,11 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80px;       
+    width: 80px;
     height: 80px;
     background: rgb(200, 54, 84);
     border-radius: 50%;
-    z-index: -1; 
+    z-index: -1;
 }
 
 #accessibility-toggle:hover,
@@ -260,21 +297,28 @@ footer {
     background: white;
     border-radius: 16px;
     padding: 14px 20px;
-    width: 180px;
+    max-width: 90vw;
+    width: auto;
     box-shadow: 0 12px 24px rgba(166, 28, 53, 0.3);
-    text-align: center;
+    text-align: left;
 }
 
 #accessibility-menu button {
+    position: relative;
     background: #f5f1f2;
     border: none;
     color: rgb(6, 6, 6);
-    padding: 12px 16px;
+    font-size: rem;
+    padding: 9px 12px;
     margin: 8px 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: left;
     cursor: pointer;
-    font-size: 1rem;
-    border-radius: 14px;
+    border-radius: 20px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -286,35 +330,103 @@ footer {
 }
 
 /* High contrast mode */
-.high-contrast {
-    background: black !important;
-    color: black !important;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.high-contrast body,
+.high-contrast main,
+.high-contrast section,
+.high-contrast header,
+.high-contrast footer {
+    background-color: #121212 !important;
+    color: #F5F5F5 !important;
+}
+
+.high-contrast #main-title {
+    color: #FFD700 !important;
+    text-align: center;
+}
+
+.high-contrast header {
+    background: #121212 !important;
+    color: #FFD700 !important;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: none !important;
+}
+
+.high-contrast nav a {
+    color: #00FFFF !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+
+.high-contrast nav a:hover,
+.high-contrast nav a:focus {
+    color: #FFD700 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3 {
+    color: #FFD700 !important;
 }
 
 .high-contrast a {
-    color: #F2A7B5 !important;
+    color: #00FFFF !important;
+    text-decoration: underline !important;
 }
 
 .high-contrast button {
-    background: #f2c2ca !important;
-    color: #A61C35 !important;
+    background-color: #FF4500 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFD700 !important;
 }
 
-.high-contrast #accessibility-toggle {
-    background: #F2A7B5 !important;
-    color: #A61C35 !important;
-    box-shadow: 0 6px 12px rgba(242, 167, 181, 0.7);
+.high-contrast input,
+.high-contrast textarea {
+    background-color: #1E1E1E !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFD700 !important;
 }
 
+.high-contrast img {
+    filter: brightness(1.2) contrast(1.5) !important;
+}
+
+.high-contrast .tooltip {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 1px solid #FFD700 !important;
+}
+
+.high-contrast #kontakt form,
+.high-contrast #kontakt form label,
+.high-contrast #kontakt form input,
+.high-contrast #kontakt form textarea,
+.high-contrast #kontakt form button {
+    color: #000 !important;
+}
+
+.high-contrast #kontakt form input,
+.high-contrast #kontakt form textarea {
+    background-color: #FFD !important;
+    border: 2px solid #000 !important;
+}
+
+.high-contrast #kontakt form button {
+    background-color: #FF4500 !important;
+    color: #FFFFFF !important;
+}
+
+/* Boldani tekst */
 .bold-text * {
     font-weight: bold !important;
 }
 
+/* Font za ljude s disleksijom */
 .dyslexia-font {
     font-family: 'Lexend', Arial, sans-serif !important;
 }
-
 
 .high-contrast a,
 .bold-text a {

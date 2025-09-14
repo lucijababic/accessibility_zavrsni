@@ -108,19 +108,40 @@
             <img src="pics\accessibility.png" alt="Pristupačnost">
         </button>
         <div id="accessibility-menu" role="menu" aria-hidden="true">
-            <button role="menuitem" id="letter-spacing-btn">Razmak slova</button>
-            <button role="menuitem" id="line-height-btn">Razmak redova</button>
-            <button role="menuitem" id="increase-font">Povećaj font</button>
-            <button role="menuitem" id="decrease-font">Smanji font</button>
-            <button role="menuitem" id="toggle-contrast">Visoki kontrast</button>
-            <button role="menuitem" id="bold-text">Podebljaj tekst</button>
-            <button role="menuitem" id="lexend-font">Lexend</button>
-            <button role="menuitem" id="atkinson-font">Atkinson Hyperlegible</button>
-            <button role="menuitem" id="reset-settings">Resetiraj postavke</button>
+            <button role="menuitem" id="letter-spacing-btn">🔤 Razmak slova
+                <span class="tooltip" aria-hidden="true">ℹ️ Povećava razmak slova</span>
+            </button>
+            <button role="menuitem" id="line-height-btn">↕️ Visina reda
+                <span class="tooltip" aria-hidden="true">ℹ️ Povećava visinu reda</span>
+            </button>
+            <button role="menuitem" id="increase-font" class="access-btn">🔼 Povećaj font
+                <span class="tooltip" aria-hidden="true">ℹ️ Povećava veličinu fonta</span>
+            </button>
+            <button role="menuitem" id="decrease-font">🔽 Smanji font
+                <span class="tooltip" aria-hidden="true">ℹ️ Smanjuje veličinu fonta</span>
+            </button>
+            <button role="menuitem" id="toggle-contrast">🌑 Visoki kontrast
+                <span class="tooltip" aria-hidden="true">ℹ️ Uključuje visoki kontrast</span>
+            </button>
+            <button role="menuitem" id="bold-text">🅱️ Podebljaj tekst
+                <span class="tooltip" aria-hidden="true">ℹ️ Podebljava tekst</span>
+            </button>
+            <button role="menuitem" id="lexend-font">🅰️ Lexend font
+                <span class="tooltip" aria-hidden="true">ℹ️ Mijenja font na Lexend</span>
+            </button>
+            <button role="menuitem" id="atkinson-font">🅰️ Atkinson Hyperlegible font
+                <span class="tooltip" aria-hidden="true">ℹ️ Mijenja font na Atkinson Hyperlegible</span>
+            </button>
+            <button role="menuitem" id="text-to-speech">🔊 Čitaj tekst
+                <span class="tooltip" aria-hidden="true">ℹ️ Čita tekst na ekranu</span>
+            </button>
+            <button role="menuitem" id="reset-settings">♻️ Resetiraj postavke
+                <span class="tooltip" aria-hidden="true">ℹ️ Resetira sve postavke</span>
+            </button>
         </div>
     </div>
 
-<script src="widget.js"></script>
+    <script src="widget.js"></script>
 </body>
 
 </html>
